@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #89ebbd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #fc93bb;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#contador {
+    color: #333333;
+    font-size: 24px;
+}
+
+#mostrarFrase {
+    background-color: #fc93bb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#mostrarFrase:hover {
+    background-color: rgba(238, 153, 227, 0.664)
+}
+
+/* Estilos para os corações */
+.coracao {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/1024px/1fa77.png); /* Substitua o caminho pela sua imagem de coração */
+    background-size: cover;
+    animation: coracaoAnimacao 4s ease-in infinite;
+}
+
+@keyframes coracaoAnimacao {
+    0% {
+        transform: translateY(-100px) rotate(45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(120vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Estilos adicionais para telas menores */
+@media only screen and (max-width: 600px) {
+    .card {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #contador {
+        font-size: 20px;
+    }
+}
